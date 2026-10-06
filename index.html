@@ -1,0 +1,2957 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ACTIVE ESENCIAL | Tienda deportiva multimarca</title>
+
+  <meta
+    name="description"
+    content="ACTIVE ESENCIAL es una tienda deportiva multimarca de El Carmen de Viboral. Descubra una selección de prendas deportivas para mujer con estilo, calidad y funcionalidad."
+  >
+
+  <meta name="theme-color" content="#183C35">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================================
+       ACTIVE ESENCIAL
+       IDENTIDAD VISUAL
+       ========================================================= */
+
+    :root {
+
+      --verde: #183C35;
+      --arcilla: #C56B4A;
+      --crema: #F4EFE7;
+      --carbon: #202522;
+      --salvia: #A9B8A4;
+      --durazno: #E8B9A0;
+
+      --blanco: #FFFFFF;
+      --gris: #66706B;
+
+      --max-width: 1240px;
+
+      --radius: 24px;
+
+      --shadow:
+        0 20px 60px rgba(32, 37, 34, 0.12);
+
+    }
+
+
+    /* =========================================================
+       RESET
+       ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+
+      font-family: "Manrope", sans-serif;
+
+      background: var(--crema);
+
+      color: var(--carbon);
+
+      line-height: 1.6;
+
+    }
+
+    img {
+
+      width: 100%;
+
+      display: block;
+
+    }
+
+    a {
+
+      text-decoration: none;
+
+      color: inherit;
+
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+
+      font-family: inherit;
+
+    }
+
+
+    .container {
+
+      width: min(
+        var(--max-width),
+        calc(100% - 40px)
+      );
+
+      margin: auto;
+
+    }
+
+
+    /* =========================================================
+       TIPOGRAFÍA
+       ========================================================= */
+
+    h1,
+    h2,
+    h3 {
+
+      font-family: "Sora", sans-serif;
+
+      line-height: 1.05;
+
+    }
+
+    h1 {
+
+      font-size: clamp(
+        3rem,
+        7vw,
+        6.5rem
+      );
+
+      letter-spacing: -0.06em;
+
+    }
+
+    h2 {
+
+      font-size: clamp(
+        2.2rem,
+        4.5vw,
+        4.2rem
+      );
+
+      letter-spacing: -0.05em;
+
+    }
+
+    h3 {
+
+      font-size: 1.2rem;
+
+    }
+
+    .eyebrow {
+
+      color: var(--arcilla);
+
+      font-size: 0.72rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.18em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =========================================================
+       BOTONES
+       ========================================================= */
+
+    .btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 15px 23px;
+
+      border-radius: 999px;
+
+      font-size: 0.78rem;
+
+      font-weight: 800;
+
+      border: 1px solid transparent;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+      cursor: pointer;
+
+    }
+
+    .btn:hover {
+
+      transform: translateY(-3px);
+
+    }
+
+    .btn-primary {
+
+      background: var(--verde);
+
+      color: var(--crema);
+
+    }
+
+    .btn-primary:hover {
+
+      box-shadow:
+        0 15px 35px rgba(24,60,53,.20);
+
+    }
+
+    .btn-outline {
+
+      border-color: var(--verde);
+
+      color: var(--verde);
+
+      background: transparent;
+
+    }
+
+    .btn-outline:hover {
+
+      background: var(--verde);
+
+      color: var(--crema);
+
+    }
+
+    .btn-arcilla {
+
+      background: var(--arcilla);
+
+      color: white;
+
+    }
+
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      background:
+        rgba(244,239,231,.94);
+
+      backdrop-filter: blur(18px);
+
+      border-bottom:
+        1px solid rgba(24,60,53,.08);
+
+    }
+
+    .nav {
+
+      height: 82px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+    }
+
+    .logo {
+
+      width: 185px;
+
+    }
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 30px;
+
+      font-size: .8rem;
+
+      font-weight: 800;
+
+    }
+
+    .nav-links a {
+
+      position: relative;
+
+    }
+
+    .nav-links a::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: -8px;
+
+      width: 0;
+
+      height: 2px;
+
+      background: var(--arcilla);
+
+      transition: width .25s;
+
+    }
+
+    .nav-links a:hover::after {
+
+      width: 100%;
+
+    }
+
+    .header-whatsapp {
+
+      background: var(--verde);
+
+      color: var(--crema);
+
+      padding: 11px 18px;
+
+      border-radius: 999px;
+
+      font-size: .75rem;
+
+      font-weight: 800;
+
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+
+      padding: 35px 0 90px;
+
+    }
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: .9fr 1.1fr;
+
+      gap: 55px;
+
+      align-items: center;
+
+    }
+
+    .hero-copy {
+
+      padding: 35px 0;
+
+    }
+
+    .hero h1 {
+
+      margin: 18px 0 25px;
+
+      color: var(--verde);
+
+    }
+
+    .hero h1 span {
+
+      color: var(--arcilla);
+
+    }
+
+    .hero-text {
+
+      max-width: 560px;
+
+      color: #56605B;
+
+      font-size: 1.02rem;
+
+      margin-bottom: 30px;
+
+    }
+
+    .hero-buttons {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+    }
+
+    .hero-location {
+
+      margin-top: 25px;
+
+      font-size: .75rem;
+
+      color: #737A76;
+
+    }
+
+    .hero-image {
+
+      position: relative;
+
+    }
+
+    .hero-image img {
+
+      height: 680px;
+
+      object-fit: cover;
+
+      border-radius: 32px;
+
+      box-shadow: var(--shadow);
+
+    }
+
+    .hero-card {
+
+      position: absolute;
+
+      bottom: 25px;
+
+      left: -20px;
+
+      background: var(--crema);
+
+      padding: 18px 20px;
+
+      border-radius: 18px;
+
+      box-shadow: var(--shadow);
+
+      max-width: 250px;
+
+    }
+
+    .hero-card strong {
+
+      display: block;
+
+      font-family: "Sora";
+
+      color: var(--verde);
+
+      font-size: .85rem;
+
+    }
+
+    .hero-card span {
+
+      display: block;
+
+      margin-top: 4px;
+
+      color: var(--gris);
+
+      font-size: .7rem;
+
+    }
+
+
+    /* =========================================================
+       SECCIONES
+       ========================================================= */
+
+    section {
+
+      padding: 100px 0;
+
+    }
+
+    .section-header {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-end;
+
+      gap: 50px;
+
+      margin-bottom: 50px;
+
+    }
+
+    .section-header p {
+
+      max-width: 500px;
+
+      color: var(--gris);
+
+    }
+
+
+    /* =========================================================
+       PROPUESTA
+       ========================================================= */
+
+    .proposal {
+
+      background: white;
+
+    }
+
+    .benefits {
+
+      display: grid;
+
+      grid-template-columns: repeat(3,1fr);
+
+      gap: 18px;
+
+    }
+
+    .benefit {
+
+      background: var(--crema);
+
+      padding: 30px;
+
+      border-radius: 22px;
+
+      border: 1px solid rgba(24,60,53,.10);
+
+    }
+
+    .benefit-number {
+
+      color: var(--arcilla);
+
+      font-weight: 800;
+
+      font-size: .75rem;
+
+      margin-bottom: 35px;
+
+    }
+
+    .benefit p {
+
+      margin-top: 10px;
+
+      color: var(--gris);
+
+      font-size: .9rem;
+
+    }
+
+
+    /* =========================================================
+       PRODUCTOS
+       ========================================================= */
+
+    .products {
+
+      background: var(--crema);
+
+    }
+
+    .products-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(12,1fr);
+
+      gap: 15px;
+
+    }
+
+    .product {
+
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 24px;
+
+      min-height: 360px;
+
+      background: #ddd;
+
+    }
+
+    .product:nth-child(1) {
+
+      grid-column: span 7;
+
+      min-height: 520px;
+
+    }
+
+    .product:nth-child(2) {
+
+      grid-column: span 5;
+
+      min-height: 520px;
+
+    }
+
+    .product:nth-child(3),
+    .product:nth-child(4),
+    .product:nth-child(5) {
+
+      grid-column: span 4;
+
+    }
+
+    .product:nth-child(6),
+    .product:nth-child(7) {
+
+      grid-column: span 6;
+
+      min-height: 470px;
+
+    }
+
+    .product img {
+
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform .5s ease;
+
+    }
+
+    .product:hover img {
+
+      transform: scale(1.04);
+
+    }
+
+    .product-info {
+
+      position: absolute;
+
+      left: 15px;
+
+      right: 15px;
+
+      bottom: 15px;
+
+      padding: 17px;
+
+      border-radius: 17px;
+
+      background:
+        rgba(244,239,231,.94);
+
+      backdrop-filter: blur(12px);
+
+    }
+
+    .product-info small {
+
+      display: block;
+
+      color: var(--arcilla);
+
+      text-transform: uppercase;
+
+      letter-spacing: .13em;
+
+      font-size: .6rem;
+
+      font-weight: 800;
+
+    }
+
+    .product-info strong {
+
+      font-family: "Sora";
+
+      font-size: .9rem;
+
+    }
+
+
+    /* =========================================================
+       EDITORIAL MUJER
+       ========================================================= */
+
+    .women {
+
+      background: var(--salvia);
+
+    }
+
+    .women-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 60px;
+
+      align-items: center;
+
+    }
+
+    .women-image {
+
+      overflow: hidden;
+
+      border-radius: 28px;
+
+    }
+
+    .women-image img {
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+    }
+
+    .women-content h2 {
+
+      margin: 18px 0;
+
+      color: var(--verde);
+
+    }
+
+    .women-content p {
+
+      max-width: 520px;
+
+      color: #394A43;
+
+      margin-bottom: 25px;
+
+    }
+
+    .tags {
+
+      display: flex;
+
+      gap: 9px;
+
+      flex-wrap: wrap;
+
+      margin-bottom: 28px;
+
+    }
+
+    .tag {
+
+      padding: 8px 14px;
+
+      border-radius: 999px;
+
+      border: 1px solid rgba(24,60,53,.2);
+
+      color: var(--verde);
+
+      font-size: .7rem;
+
+      font-weight: 800;
+
+    }
+
+
+    /* =========================================================
+       MOMENTOS
+       ========================================================= */
+
+    .moments {
+
+      background: white;
+
+    }
+
+    .moments-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3,1fr);
+
+      gap: 18px;
+
+    }
+
+    .moment {
+
+      min-height: 260px;
+
+      border-radius: 24px;
+
+      padding: 30px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: flex-end;
+
+    }
+
+    .moment:nth-child(1) {
+
+      background: var(--verde);
+
+      color: var(--crema);
+
+    }
+
+    .moment:nth-child(2) {
+
+      background: var(--durazno);
+
+    }
+
+    .moment:nth-child(3) {
+
+      background: var(--carbon);
+
+      color: var(--crema);
+
+    }
+
+    .moment-number {
+
+      color: var(--arcilla);
+
+      font-size: .7rem;
+
+      font-weight: 800;
+
+      letter-spacing: .1em;
+
+      margin-bottom: 10px;
+
+    }
+
+    .moment p {
+
+      margin-top: 8px;
+
+      opacity: .75;
+
+      font-size: .85rem;
+
+    }
+
+
+    /* =========================================================
+       MULTIMARCA
+       ========================================================= */
+
+    .multibrand {
+
+      background: var(--verde);
+
+      color: var(--crema);
+
+    }
+
+    .multibrand-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.1fr .9fr;
+
+      gap: 70px;
+
+      align-items: center;
+
+    }
+
+    .multibrand h2 {
+
+      margin: 18px 0;
+
+    }
+
+    .multibrand-text {
+
+      max-width: 580px;
+
+      color:
+        rgba(244,239,231,.75);
+
+    }
+
+    .multibrand-list {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 15px;
+
+    }
+
+    .multi-item {
+
+      border-top:
+        1px solid rgba(244,239,231,.20);
+
+      padding: 20px 0;
+
+      font-family: "Sora";
+
+      font-size: .95rem;
+
+    }
+
+    .multi-item span {
+
+      color: var(--arcilla);
+
+      margin-right: 8px;
+
+    }
+
+
+    /* =========================================================
+       CONTACTO / FORMULARIO
+       ========================================================= */
+
+    .contact {
+
+      background: var(--durazno);
+
+    }
+
+    .contact-grid {
+
+      display: grid;
+
+      grid-template-columns: .85fr 1.15fr;
+
+      gap: 60px;
+
+      align-items: start;
+
+    }
+
+    .contact-copy h2 {
+
+      margin: 18px 0;
+
+    }
+
+    .contact-copy p {
+
+      max-width: 500px;
+
+      color: #504A47;
+
+    }
+
+    .form-card {
+
+      background: white;
+
+      padding: 30px;
+
+      border-radius: 28px;
+
+      box-shadow: var(--shadow);
+
+    }
+
+    .form-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 15px;
+
+    }
+
+    .field {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 7px;
+
+    }
+
+    .field.full {
+
+      grid-column: 1 / -1;
+
+    }
+
+    label {
+
+      font-size: .7rem;
+
+      font-weight: 800;
+
+      color: #46514C;
+
+    }
+
+    input,
+    select,
+    textarea {
+
+      width: 100%;
+
+      padding: 13px 14px;
+
+      border:
+        1px solid rgba(24,60,53,.15);
+
+      border-radius: 12px;
+
+      outline: none;
+
+      background: white;
+
+      color: var(--carbon);
+
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+
+      border-color: var(--verde);
+
+      box-shadow:
+        0 0 0 3px rgba(24,60,53,.08);
+
+    }
+
+    textarea {
+
+      min-height: 110px;
+
+      resize: vertical;
+
+    }
+
+    .form-bottom {
+
+      margin-top: 18px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+
+    }
+
+    .form-note {
+
+      font-size: .65rem;
+
+      color: var(--gris);
+
+      max-width: 270px;
+
+    }
+
+
+    /* =========================================================
+       ORIGEN
+       ========================================================= */
+
+    .origin {
+
+      background: var(--crema);
+
+      text-align: center;
+
+    }
+
+    .origin h2 {
+
+      margin-top: 15px;
+
+      color: var(--verde);
+
+    }
+
+    .origin p {
+
+      max-width: 550px;
+
+      margin: 18px auto;
+
+      color: var(--gris);
+
+    }
+
+    .origin-line {
+
+      width: 70px;
+
+      height: 2px;
+
+      background: var(--arcilla);
+
+      margin: 25px auto;
+
+    }
+
+    .email {
+
+      color: var(--verde);
+
+      font-weight: 800;
+
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+
+      background: var(--carbon);
+
+      color: var(--crema);
+
+      padding: 60px 0 30px;
+
+    }
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.3fr .7fr .9fr;
+
+      gap: 50px;
+
+    }
+
+    .footer-logo {
+
+      width: 190px;
+
+      margin-bottom: 18px;
+
+    }
+
+    .footer-description {
+
+      color:
+        rgba(244,239,231,.65);
+
+      font-size: .8rem;
+
+      max-width: 300px;
+
+    }
+
+    .footer h4 {
+
+      font-family: "Sora";
+
+      margin-bottom: 15px;
+
+      font-size: .85rem;
+
+    }
+
+    .footer-links {
+
+      display: grid;
+
+      gap: 8px;
+
+      color:
+        rgba(244,239,231,.68);
+
+      font-size: .78rem;
+
+    }
+
+    .footer-links a:hover {
+
+      color: var(--arcilla);
+
+    }
+
+    .footer-bottom {
+
+      margin-top: 45px;
+
+      padding-top: 20px;
+
+      border-top:
+        1px solid rgba(244,239,231,.12);
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      color:
+        rgba(244,239,231,.45);
+
+      font-size: .65rem;
+
+    }
+
+
+    /* =========================================================
+       WHATSAPP FLOTANTE
+       ========================================================= */
+
+    .whatsapp-floating {
+
+      position: fixed;
+
+      right: 22px;
+
+      bottom: 22px;
+
+      width: 60px;
+
+      height: 60px;
+
+      border-radius: 50%;
+
+      background: var(--verde);
+
+      color: white;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      z-index: 999;
+
+      box-shadow:
+        0 15px 35px rgba(24,60,53,.30);
+
+      border:
+        3px solid var(--crema);
+
+      transition: .25s;
+
+    }
+
+    .whatsapp-floating:hover {
+
+      transform:
+        translateY(-4px)
+        scale(1.05);
+
+    }
+
+    .whatsapp-floating svg {
+
+      width: 28px;
+
+      height: 28px;
+
+    }
+
+
+    /* =========================================================
+       ANIMACIONES
+       ========================================================= */
+
+    .reveal {
+
+      opacity: 0;
+
+      transform:
+        translateY(25px);
+
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+    }
+
+    .reveal.active {
+
+      opacity: 1;
+
+      transform: none;
+
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media(max-width: 950px) {
+
+      .nav-links {
+
+        display: none;
+
+      }
+
+      .hero-grid,
+      .women-grid,
+      .multibrand-grid,
+      .contact-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .hero-image img {
+
+        height: 560px;
+
+      }
+
+      .benefits,
+      .moments-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .section-header {
+
+        display: block;
+
+      }
+
+      .section-header p {
+
+        margin-top: 20px;
+
+      }
+
+      .footer-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+      }
+
+    }
+
+
+    @media(max-width: 650px) {
+
+      .container {
+
+        width:
+          calc(100% - 28px);
+
+      }
+
+      section {
+
+        padding: 70px 0;
+
+      }
+
+      .nav {
+
+        height: 70px;
+
+      }
+
+      .logo {
+
+        width: 155px;
+
+      }
+
+      h1 {
+
+        font-size:
+          clamp(
+            2.7rem,
+            14vw,
+            4rem
+          );
+
+      }
+
+      h2 {
+
+        font-size: 2.3rem;
+
+      }
+
+      .hero {
+
+        padding-top: 20px;
+
+      }
+
+      .hero-image img {
+
+        height: 480px;
+
+      }
+
+      .hero-card {
+
+        left: 12px;
+
+        bottom: 12px;
+
+      }
+
+      .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+      }
+
+      .btn {
+
+        width: 100%;
+
+      }
+
+      .products-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+      }
+
+      .product,
+      .product:nth-child(n) {
+
+        grid-column: auto;
+
+        min-height: 280px;
+
+      }
+
+      .product:nth-child(1),
+      .product:nth-child(2) {
+
+        min-height: 390px;
+
+      }
+
+      .product:nth-child(6),
+      .product:nth-child(7) {
+
+        min-height: 330px;
+
+      }
+
+      .product-info {
+
+        left: 8px;
+
+        right: 8px;
+
+        bottom: 8px;
+
+        padding: 12px;
+
+      }
+
+      .product-info strong {
+
+        font-size: .76rem;
+
+      }
+
+      .form-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .field.full {
+
+        grid-column: auto;
+
+      }
+
+      .footer-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .footer-bottom {
+
+        display: block;
+
+      }
+
+      .footer-bottom span {
+
+        display: block;
+
+        margin-top: 7px;
+
+      }
+
+      .whatsapp-floating {
+
+        right: 15px;
+
+        bottom: 15px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header>
+
+  <div class="container nav">
+
+    <a href="#inicio">
+
+      <img
+        class="logo"
+        src="assets/logo.png"
+        alt="ACTIVE ESENCIAL - Tienda deportiva multimarca"
+      >
+
+    </a>
+
+
+    <nav class="nav-links">
+
+      <a href="#inicio">
+        Inicio
+      </a>
+
+      <a href="#seleccion">
+        Selección
+      </a>
+
+      <a href="#mujer">
+        Mujer
+      </a>
+
+      <a href="#nosotros">
+        Nosotros
+      </a>
+
+      <a href="#contacto">
+        Contacto
+      </a>
+
+    </nav>
+
+
+    <a
+      class="header-whatsapp"
+      href="https://wa.me/573136859364"
+      target="_blank"
+      rel="noopener"
+    >
+      WhatsApp
+    </a>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero" id="inicio">
+
+  <div class="container hero-grid">
+
+
+    <div class="hero-copy reveal">
+
+      <div class="eyebrow">
+
+        Tienda deportiva multimarca · Mujer
+
+      </div>
+
+
+      <h1>
+
+        ESTILO Y CALIDAD
+
+        <span>EN</span>
+
+        <br>
+
+        <span>MOVIMIENTO.</span>
+
+      </h1>
+
+
+      <p class="hero-text">
+
+        Una selección de prendas deportivas para mujeres
+        que quieren entrenar, moverse y sentirse bien,
+        con opciones que combinan estilo, comodidad
+        y funcionalidad.
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a
+          class="btn btn-primary"
+          href="#seleccion"
+        >
+
+          Ver la selección
+
+        </a>
+
+
+        <a
+          class="btn btn-outline"
+          href="https://wa.me/573136859364?text=Hola%20ACTIVE%20ESENCIAL.%20Estoy%20interesada%20en%20conocer%20la%20selecci%C3%B3n%20de%20prendas%20deportivas%20para%20mujer.%20%C2%BFMe%20pueden%20ayudar%3F"
+          target="_blank"
+          rel="noopener"
+        >
+
+          Comprar por WhatsApp
+
+        </a>
+
+      </div>
+
+
+      <p class="hero-location">
+
+        El Carmen de Viboral · Oriente Antioqueño
+
+      </p>
+
+    </div>
+
+
+
+    <div class="hero-image reveal">
+
+      <img
+        src="assets/modelo-verde.jpg"
+        alt="Mujer usando conjunto deportivo verde"
+      >
+
+
+      <div class="hero-card">
+
+        <strong>
+          Selección ACTIVE ESENCIAL
+        </strong>
+
+        <span>
+          Productos deportivos seleccionados
+          por estilo y calidad.
+        </span>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROPUESTA
+     ========================================================= -->
+
+<section class="proposal">
+
+  <div class="container">
+
+
+    <div class="section-header reveal">
+
+      <div>
+
+        <div class="eyebrow">
+          Nuestra propuesta
+        </div>
+
+        <h2>
+          Una selección pensada para usted.
+        </h2>
+
+      </div>
+
+
+      <p>
+
+        En ACTIVE ESENCIAL seleccionamos prendas deportivas
+        que combinan estilo, comodidad y funcionalidad para
+        acompañar diferentes formas de movimiento.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="benefits">
+
+
+      <article class="benefit reveal">
+
+        <div class="benefit-number">
+          01
+        </div>
+
+        <h3>
+          ESTILO
+        </h3>
+
+        <p>
+          Prendas que se adaptan a diferentes
+          momentos de su día.
+        </p>
+
+      </article>
+
+
+
+      <article class="benefit reveal">
+
+        <div class="benefit-number">
+          02
+        </div>
+
+        <h3>
+          CALIDAD
+        </h3>
+
+        <p>
+          Productos seleccionados por sus
+          características y materiales.
+        </p>
+
+      </article>
+
+
+
+      <article class="benefit reveal">
+
+        <div class="benefit-number">
+          03
+        </div>
+
+        <h3>
+          MOVIMIENTO
+        </h3>
+
+        <p>
+          Opciones para entrenamiento,
+          bienestar y lifestyle.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRODUCTOS
+     ========================================================= -->
+
+<section class="products" id="seleccion">
+
+  <div class="container">
+
+
+    <div class="section-header reveal">
+
+      <div>
+
+        <div class="eyebrow">
+          Productos reales
+        </div>
+
+        <h2>
+          Conozca la selección.
+        </h2>
+
+      </div>
+
+
+      <p>
+
+        Descubra las prendas que actualmente hacen parte
+        de nuestra selección femenina.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="products-grid">
+
+
+      <!-- CHAQUETAS -->
+
+      <article class="product reveal">
+
+        <img
+          src="assets/chaquetas.jpg"
+          alt="Chaquetas deportivas para mujer en diferentes colores"
+          loading="lazy"
+        >
+
+        <div class="product-info">
+
+          <small>
+            Selección
+          </small>
+
+          <strong>
+            Chaquetas deportivas
+          </strong>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- LEGGINGS NEUTROS -->
+
+      <article class="product reveal">
+
+        <img
+          src="assets/leggings-neutros.jpg"
+          alt="Leggings deportivos femeninos en negro gris crema y café"
+          loading="lazy"
+        >
+
+        <div class="product-info">
+
+          <small>
+            Selección
+          </small>
+
+          <strong>
+            Leggings · tonos neutros
+          </strong>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- LEGGINGS COLOR -->
+
+      <article class="product reveal">
+
+        <img
+          src="assets/leggings-color.jpg"
+          alt="Leggings deportivos femeninos en azul rosado y coral"
+          loading="lazy"
+        >
+
+        <div class="product-info">
+
+          <small>
+            Color
+          </small>
+
+          <strong>
+            Leggings · tonos de temporada
+          </strong>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- CONJUNTO VERDE -->
+
+      <article class="product reveal">
+
+        <img
+          src="assets/modelo-verde.jpg"
+          alt="Conjunto deportivo verde para mujer"
+          loading="lazy"
+        >
+
+        <div class="product-info">
+
+          <small>
+            Lifestyle
+          </small>
+
+          <strong>
+            Conjunto deportivo verde
+          </strong>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- SHORTS -->
+
+      <article class="product reveal">
+
+        <img
+          src="assets/shorts.jpg"
+          alt="Shorts deportivos femeninos en diferentes colores"
+          loading="lazy"
+        >
+
+        <div class="product-info">
+
+          <small>
+            Selección
+          </small>
+
+          <strong>
+            Shorts deportivos
+          </strong>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- CONJUNTO AZUL -->
+
+      <article class="product reveal">
+
+        <img
+          src="assets/conjunto-azul.jpg"
+          alt="Conjunto deportivo azul para mujer"
+          loading="lazy"
+        >
+
+        <div class="product-info">
+
+          <small>
+            Conjunto
+          </small>
+
+          <strong>
+            Conjunto deportivo azul
+          </strong>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- SELECCIÓN -->
+
+      <article class="product reveal">
+
+        <img
+          src="assets/leggings-color.jpg"
+          alt="Selección de prendas deportivas femeninas"
+          loading="lazy"
+        >
+
+        <div class="product-info">
+
+          <small>
+            ACTIVE ESENCIAL
+          </small>
+
+          <strong>
+            Muévase a su manera
+          </strong>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MUJER
+     ========================================================= -->
+
+<section class="women" id="mujer">
+
+  <div class="container women-grid">
+
+
+    <div class="women-image reveal">
+
+      <img
+        src="assets/modelo-verde.jpg"
+        alt="Mujer usando ropa deportiva verde"
+        loading="lazy"
+      >
+
+    </div>
+
+
+
+    <div class="women-content reveal">
+
+      <div class="eyebrow">
+        Selección mujer
+      </div>
+
+
+      <h2>
+        Muévase a su manera.
+      </h2>
+
+
+      <p>
+
+        Una selección deportiva pensada para acompañar
+        su ritmo, desde el entrenamiento hasta esos momentos
+        en los que simplemente quiere sentirse cómoda
+        y verse bien.
+
+      </p>
+
+
+      <div class="tags">
+
+        <span class="tag">
+          Entrenamiento
+        </span>
+
+        <span class="tag">
+          Lifestyle
+        </span>
+
+        <span class="tag">
+          Comodidad
+        </span>
+
+      </div>
+
+
+      <a
+        href="#seleccion"
+        class="btn btn-primary"
+      >
+
+        Ver selección
+
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MOMENTOS
+     ========================================================= -->
+
+<section class="moments">
+
+  <div class="container">
+
+
+    <div class="section-header reveal">
+
+      <div>
+
+        <div class="eyebrow">
+          Encuentre su estilo
+        </div>
+
+        <h2>
+          Prendas para diferentes momentos.
+        </h2>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="moments-grid">
+
+
+      <article class="moment reveal">
+
+        <div class="moment-number">
+          01
+        </div>
+
+        <h3>
+          ENTRENAMIENTO
+        </h3>
+
+        <p>
+          Prendas para acompañar sus sesiones
+          de ejercicio.
+        </p>
+
+      </article>
+
+
+
+      <article class="moment reveal">
+
+        <div class="moment-number">
+          02
+        </div>
+
+        <h3>
+          LIFESTYLE
+        </h3>
+
+        <p>
+          Deportivo que también funciona
+          fuera del entrenamiento.
+        </p>
+
+      </article>
+
+
+
+      <article class="moment reveal">
+
+        <div class="moment-number">
+          03
+        </div>
+
+        <h3>
+          COMODIDAD
+        </h3>
+
+        <p>
+          Prendas versátiles para moverse
+          durante el día.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MULTIMARCA
+     ========================================================= -->
+
+<section
+  class="multibrand"
+  id="nosotros"
+>
+
+  <div class="container multibrand-grid">
+
+
+    <div class="reveal">
+
+      <div class="eyebrow">
+        Nuestro diferencial
+      </div>
+
+
+      <h2>
+
+        Diferentes marcas.
+        <br>
+        Una selección con criterio.
+
+      </h2>
+
+
+      <p class="multibrand-text">
+
+        No se trata de tenerlo todo.
+        Se trata de encontrar productos que realmente
+        valga la pena considerar.
+
+        <br><br>
+
+        ACTIVE ESENCIAL selecciona, presenta
+        y recomienda.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="multibrand-list reveal">
+
+
+      <div class="multi-item">
+
+        <span>
+          01
+        </span>
+
+        SELECCIONAMOS.
+
+      </div>
+
+
+      <div class="multi-item">
+
+        <span>
+          02
+        </span>
+
+        PRESENTAMOS.
+
+      </div>
+
+
+      <div class="multi-item">
+
+        <span>
+          03
+        </span>
+
+        RECOMENDAMOS.
+
+      </div>
+
+
+      <div class="multi-item">
+
+        <span>
+          04
+        </span>
+
+        ACOMPAÑAMOS.
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FORMULARIO WHATSAPP
+     ========================================================= -->
+
+<section
+  class="contact"
+  id="contacto"
+>
+
+  <div class="container contact-grid">
+
+
+    <div class="contact-copy reveal">
+
+      <div class="eyebrow">
+        Compra por WhatsApp
+      </div>
+
+
+      <h2>
+        ¿No sabe cuál elegir?
+      </h2>
+
+
+      <p>
+
+        Cuéntenos qué está buscando y le ayudaremos
+        a encontrar una opción según su actividad,
+        estilo, talla y color.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="form-card reveal">
+
+
+      <form id="whatsappForm">
+
+
+        <div class="form-grid">
+
+
+          <div class="field">
+
+            <label for="nombre">
+              Nombre
+            </label>
+
+            <input
+              type="text"
+              id="nombre"
+              required
+              placeholder="Su nombre"
+            >
+
+          </div>
+
+
+
+          <div class="field">
+
+            <label for="telefono">
+              Celular
+            </label>
+
+            <input
+              type="tel"
+              id="telefono"
+              required
+              placeholder="Su celular"
+            >
+
+          </div>
+
+
+
+          <div class="field full">
+
+            <label for="producto">
+              ¿Qué producto le interesa?
+            </label>
+
+            <select
+              id="producto"
+              required
+            >
+
+              <option value="">
+                Seleccione una opción
+              </option>
+
+              <option>
+                Chaquetas deportivas
+              </option>
+
+              <option>
+                Leggings tonos neutros
+              </option>
+
+              <option>
+                Leggings azul, rosado o coral
+              </option>
+
+              <option>
+                Conjunto deportivo verde
+              </option>
+
+              <option>
+                Shorts deportivos
+              </option>
+
+              <option>
+                Conjunto deportivo azul
+              </option>
+
+              <option>
+                Otra prenda de la selección
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <div class="field">
+
+            <label for="talla">
+              Talla
+            </label>
+
+            <select id="talla">
+
+              <option value="">
+                Por confirmar
+              </option>
+
+              <option>
+                XS
+              </option>
+
+              <option>
+                S
+              </option>
+
+              <option>
+                M
+              </option>
+
+              <option>
+                L
+              </option>
+
+              <option>
+                XL
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <div class="field">
+
+            <label for="color">
+              Color de interés
+            </label>
+
+            <input
+              type="text"
+              id="color"
+              placeholder="Ej. negro, verde, azul"
+            >
+
+          </div>
+
+
+
+          <div class="field full">
+
+            <label for="mensaje">
+              ¿Qué desea consultar?
+            </label>
+
+            <textarea
+              id="mensaje"
+              placeholder="Cuéntenos qué necesita."
+            ></textarea>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="form-bottom">
+
+          <div class="form-note">
+
+            Al enviar el formulario se abrirá WhatsApp
+            con la información diligenciada.
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-arcilla"
+          >
+
+            Enviar a WhatsApp
+
+          </button>
+
+        </div>
+
+
+      </form>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ORIGEN
+     ========================================================= -->
+
+<section class="origin">
+
+  <div class="container reveal">
+
+
+    <div class="eyebrow">
+      Origen
+    </div>
+
+
+    <h2>
+      Desde El Carmen de Viboral.
+    </h2>
+
+
+    <p>
+
+      Una tienda deportiva multimarca
+      nacida en el Oriente Antioqueño.
+
+    </p>
+
+
+    <div class="origin-line"></div>
+
+
+    <a
+      class="email"
+      href="mailto:activeesencial@gmail.com"
+    >
+
+      activeesencial@gmail.com
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+  <div class="container">
+
+
+    <div class="footer-grid">
+
+
+      <div>
+
+        <img
+          class="footer-logo"
+          src="assets/logo.png"
+          alt="ACTIVE ESENCIAL"
+        >
+
+
+        <p class="footer-description">
+
+          Tienda deportiva multimarca.
+
+          <br><br>
+
+          Estilo y calidad en movimiento.
+
+        </p>
+
+      </div>
+
+
+
+      <div>
+
+        <h4>
+          Explorar
+        </h4>
+
+
+        <div class="footer-links">
+
+          <a href="#inicio">
+            Inicio
+          </a>
+
+          <a href="#seleccion">
+            Selección
+          </a>
+
+          <a href="#mujer">
+            Mujer
+          </a>
+
+          <a href="#nosotros">
+            Nosotros
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div>
+
+        <h4>
+          Contacto
+        </h4>
+
+
+        <div class="footer-links">
+
+          <a
+            href="https://wa.me/573136859364"
+            target="_blank"
+            rel="noopener"
+          >
+
+            +57 313 685 9364
+
+          </a>
+
+
+          <a
+            href="mailto:activeesencial@gmail.com"
+          >
+
+            activeesencial@gmail.com
+
+          </a>
+
+
+          <span>
+            El Carmen de Viboral,
+            Antioquia
+          </span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+      <span>
+
+        © <span id="year"></span>
+        ACTIVE ESENCIAL
+
+      </span>
+
+
+      <span>
+
+        ESTILO Y CALIDAD EN MOVIMIENTO.
+
+      </span>
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     BOTÓN FLOTANTE WHATSAPP
+     ========================================================= -->
+
+<a
+  class="whatsapp-floating"
+  href="https://wa.me/573136859364?text=Hola%20ACTIVE%20ESENCIAL.%20Quiero%20conocer%20la%20selecci%C3%B3n%20de%20prendas%20deportivas.%20%C2%BFMe%20pueden%20ayudar%3F"
+  target="_blank"
+  rel="noopener"
+  aria-label="Hablar por WhatsApp"
+  title="Hablar por WhatsApp"
+>
+
+
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+
+    <path
+      d="M20.1 3.9A11.7 11.7 0 0 0 12 .5C5.6.5.5 5.6.5 12c0 2 .5 4 1.5 5.7L.4 23.5l6-1.6A11.5 11.5 0 0 0 12 23.5c6.4 0 11.5-5.1 11.5-11.5 0-3.1-1.2-6-3.4-8.1Zm-8.1 17.7c-1.8 0-3.6-.5-5.1-1.5l-.4-.2-3.6 1 1-3.5-.2-.4A9.5 9.5 0 1 1 12 21.6Zm5.2-7.1c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 .9-.2.1-.4.1-.7 0-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.2-.7.2-.2.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.8.8.3 1.4.5 1.9.7.8.2 1.5.2 2 .1.6-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.1-1.3-.1-.2-.3-.3-.6-.5Z"
+      fill="currentColor"
+    />
+
+  </svg>
+
+</a>
+
+
+
+<script>
+
+  /* =========================================================
+     WHATSAPP
+     ========================================================= */
+
+  const WHATSAPP_NUMBER =
+    "573136859364";
+
+
+  /* =========================================================
+     FORMULARIO
+     ========================================================= */
+
+  document
+    .getElementById("whatsappForm")
+    .addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+
+      const nombre =
+        document
+        .getElementById("nombre")
+        .value
+        .trim();
+
+
+      const telefono =
+        document
+        .getElementById("telefono")
+        .value
+        .trim();
+
+
+      const producto =
+        document
+        .getElementById("producto")
+        .value;
+
+
+      const talla =
+        document
+        .getElementById("talla")
+        .value ||
+        "Por confirmar";
+
+
+      const color =
+        document
+        .getElementById("color")
+        .value
+        .trim() ||
+        "Por confirmar";
+
+
+      const mensaje =
+        document
+        .getElementById("mensaje")
+        .value
+        .trim() ||
+        "Deseo conocer disponibilidad y precio.";
+
+
+      const whatsappMessage = `
+
+Hola, ACTIVE ESENCIAL.
+
+Quiero consultar una prenda deportiva.
+
+Nombre: ${nombre}
+
+Celular: ${telefono}
+
+Producto: ${producto}
+
+Talla: ${talla}
+
+Color: ${color}
+
+Mensaje:
+
+${mensaje}
+
+¿Me pueden ayudar con disponibilidad y precio?
+
+      `;
+
+
+      const url =
+
+        "https://wa.me/" +
+
+        WHATSAPP_NUMBER +
+
+        "?text=" +
+
+        encodeURIComponent(
+          whatsappMessage
+        );
+
+
+      window.open(
+        url,
+        "_blank"
+      );
+
+    });
+
+
+
+  /* =========================================================
+     AÑO FOOTER
+     ========================================================= */
+
+  document
+    .getElementById("year")
+    .textContent =
+    new Date().getFullYear();
+
+
+
+  /* =========================================================
+     ANIMACIONES
+     ========================================================= */
+
+  const observer =
+    new IntersectionObserver(
+
+      entries => {
+
+        entries.forEach(
+          entry => {
+
+            if (
+              entry.isIntersecting
+            ) {
+
+              entry.target
+                .classList
+                .add("active");
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          }
+        );
+
+      },
+
+      {
+        threshold: 0.12
+      }
+
+    );
+
+
+  document
+    .querySelectorAll(".reveal")
+    .forEach(
+      element =>
+        observer.observe(element)
+    );
+
+</script>
+
+
+</body>
+</html>
